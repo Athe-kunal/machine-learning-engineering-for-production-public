@@ -11,6 +11,7 @@ app = FastAPI(title="Predicting Wine Class with batching")
 # Open classifier in global scope
 with open("models/wine.pkl", "rb") as file:
     clf = pickle.load(file)
+    print(f"The model successfully loaded")
 
 
 class Wine(BaseModel):
